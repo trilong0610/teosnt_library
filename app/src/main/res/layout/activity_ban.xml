@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo_ban"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/iconfb"
+        android:transitionName="logo_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_logo_ban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="cursive"
+        android:text="Tài khoản của bạn đã bị khóa"
+        android:transitionName="logo_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:fontFamily="@font/bungee"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo_ban"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_noti_ban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="cursive"
+        android:text="Liên hệ với Admin để biết thêm thông tin"
+        android:transitionName="logo_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:fontFamily="@font/bungee"
+        app:layout_constraintTop_toBottomOf="@+id/tv_logo_ban"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/tv_author_ban"
+        app:layout_constraintTop_toBottomOf="@id/tv_noti_ban"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="30dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/cardview_ban_tac_gia"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_change_ban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tacgia_ban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/avt_tac_gia_ban"
+                    android:layout_alignRight="@id/ten_tac_gia_ban"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bungee"
+                    android:text="Tác giả"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/avt_tac_gia_ban"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_below="@+id/tacgia_ban"
+                    android:background="@drawable/background_item_user"
+                    android:src="@drawable/img_20200708_123139" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ten_tac_gia_ban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/avt_tac_gia_ban"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/avt_tac_gia_ban"
+                    android:fontFamily="@font/bungee"
+                    android:text="Nguyễn Tri Long"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ten_tac_gia_ban"
+                    android:layout_alignLeft="@id/ten_tac_gia_ban"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="-20dp"
+                    android:fontFamily="@font/bungee"
+                    android:text="(Tèo)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lien_he_ban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ten_tac_gia_ban"
+                    android:layout_alignLeft="@id/ten_tac_gia_ban"
+                    android:layout_alignRight="@id/ten_tac_gia_ban"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="Liên Hệ"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/contact_fb_ban"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/lien_he_ban"
+                    android:layout_alignLeft="@id/lien_he_ban"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icons8_facebook_240" />
+
+                <ImageView
+                    android:id="@+id/contact_gmail_ban"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lien_he_ban"
+                    android:layout_toRightOf="@+id/contact_fb_ban"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/contact_telegram_ban"
+                    android:src="@drawable/icons8_gmail_240" />
+
+                <ImageView
+                    android:id="@+id/contact_telegram_ban"
+                    android:layout_width="50dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lien_he_ban"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icons8_telegram_app_240" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_exit_ban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Đăng Xuất Và Thoát"
+            app:backgroundTint="@color/black" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_author_ban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Copyright © teooo.nt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:fontFamily="@font/bungee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

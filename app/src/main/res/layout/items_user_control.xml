@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:minHeight="88dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <!--            Title   -->
+            <TextView
+                android:text="Email :"
+                android:fontFamily="@font/bungee"
+                android:textSize="10sp"
+                android:layout_alignRight="@+id/tv_user_control_title_id_user"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tv_user_control_title_email_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="ID Note :"
+                android:fontFamily="@font/bungee"
+                android:textSize="10sp"
+                android:id="@+id/tv_user_control_title_id_user"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_control_title_email_user"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/black"/>
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/sw_user_control_ban"
+                android:text="Ban : "
+                android:textSize="10sp"
+                android:fontFamily="@font/bungee"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_user_control_title_id_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:useMaterialThemeColors="true"/>
+
+            <!--            Content   -->
+            <TextView
+                android:id="@+id/tv_user_control_email_user"
+                android:layout_toRightOf="@id/tv_user_control_title_email_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/tv_user_control_id_note"
+                android:layout_toRightOf="@id/tv_user_control_title_id_user"
+                android:layout_alignTop="@id/tv_user_control_title_id_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

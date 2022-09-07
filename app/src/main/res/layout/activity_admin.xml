@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/admin_container"
+
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottom_nav_menu_admin"
+        android:id="@+id/activity_admin">
+
+    </RelativeLayout>
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_nav_menu_admin"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="50dp"
+        app:cnb_menuResource="@menu/bottom_app_bar_admin"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corners"
+        app:cnb_orientationMode="horizontal"
+        android:layout_margin="10dp"
+        android:elevation="8dp"
+        app:cnb_radius="8dp"/>
+</RelativeLayout>

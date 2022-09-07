@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView_id_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:backgroundTint="@color/facebook"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/bungee"
+        android:text="ID"
+        android:layout_marginLeft="15dp"
+        />
+    <!--    Card view -->
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        android:layout_below="@+id/textView_id_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+        <!--        Layout tong-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/tv_1"
+                    android:text="Người thêm:"
+                    android:src="@drawable/ic_baseline_person_add_alt_1_24"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/bungee"
+                    android:layout_margin="5dp"
+                    android:textSize="14sp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_author_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_1"
+                    android:layout_toRightOf="@+id/tv_1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Author"
+                    android:textSize="15sp"
+                    />
+                <ImageView
+                    android:id="@+id/tv_2"
+                    android:text="URL: "
+                    android:src="@drawable/ic_baseline_link_24"
+                    android:fontFamily="@font/bungee"
+                    android:layout_below="@+id/tv_1"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="14dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_url_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/tv_2"
+                    android:layout_alignTop="@+id/tv_2"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:text="aaaaaaa"
+                    android:layout_height="wrap_content"/>
+
+            <!--                Button group-->
+            <RelativeLayout
+                android:id="@+id/layout_button_back_item"
+                android:layout_below="@+id/textView_url_profile"
+                android:paddingTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:backgroundTint="@color/black"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Xóa"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_change_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/btn_delete_profile"
+                    android:layout_toLeftOf="@+id/btn_update_id_profile"
+                    app:backgroundTint="@color/black"
+                    android:text="Sửa"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_update_id_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    app:backgroundTint="@color/black"
+                    android:text="Update ID"/>
+                <com.ncorti.slidetoact.SlideToActView
+                    android:id="@+id/stav_login_name"
+                    android:layout_width="match_parent"
+                    app:slider_icon="@drawable/icons8_link_52"
+                    app:area_margin="1dp"
+                    app:border_radius="8dp"
+                    app:text_size="7dp"
+                    app:inner_color="@color/white"
+                    app:outer_color="@color/black"
+                    android:layout_below="@+id/btn_change_profile"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"/>
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="Copyright © teooo.nt"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/bungee"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mnu_item_facebook"
+        android:title="Facebook"
+        android:icon="@drawable/iconfb"
+        app:cnb_iconColor="@color/facebook"
+        />
+    <item
+        android:id="@+id/mnu_item_my_facebook"
+        android:title="Đã tải lên"
+        android:icon="@drawable/ic_baseline_backup_24"
+        app:cnb_iconColor="@color/green"
+        />
+    <item
+        android:id="@+id/mnu_item_user"
+        android:title="Tài khoản"
+        android:icon="@drawable/ic_baseline_account_circle_24_black"
+        app:cnb_iconColor="@color/pink"
+        />
+    <item
+        android:id="@+id/mnu_item_about_us"
+        android:title="Thông tin"
+        android:icon="@drawable/ic_baseline_info_24"
+        app:cnb_iconColor="@color/gray"
+        />
+</menu>

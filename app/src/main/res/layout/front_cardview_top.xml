@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="5dp"
+        app:cardCornerRadius="2dp"
+        android:id="@+id/layout_front_cardview_top"
+        app:cardElevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_name_user_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/bungee"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Hi, "/>
+            <ImageView
+                android:id="@+id/image_front_cardview_top_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btn_add_fb"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                app:icon="@drawable/ic_baseline_person_add_24"-->
+<!--                app:backgroundTint="@color/white"-->
+<!--                android:text="Thêm"-->
+<!--                android:textColor="@color/facebook"-->
+<!--                app:iconTint="@color/facebook"/>-->
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

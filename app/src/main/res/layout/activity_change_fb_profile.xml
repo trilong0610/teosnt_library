@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activity_change_profile"
+    tools:context=".activity.AddProfileActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_change"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp">
+        <!--        Layout tong-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <com.google.android.material.card.MaterialCardView
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_change_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/background_item_user_avatar" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--            Slide bar  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:clipChildren="false"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Liên kết facebook (https://www.facebook.com/...)"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    android:id="@+id/inputLayout_change_link"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_change_link"
+                        android:inputType="textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar_change_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_change_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chọn ảnh"
+            app:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_change_save"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu"
+            app:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_change_exit"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            app:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+    </LinearLayout>
+
+</LinearLayout>
