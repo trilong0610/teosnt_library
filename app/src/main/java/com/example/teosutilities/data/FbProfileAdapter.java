@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teosutilities.R;
 import com.example.teosutilities.activity.ChangeFbProfileActivity;
+import com.example.teosutilities.fragment.HomeFragment;
+import com.example.teosutilities.fragment.MyUploadedFragment;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,7 +63,7 @@ public class FbProfileAdapter extends RecyclerView.Adapter<FbProfileAdapter.User
                 .into(holder.ivAvatar);
 //        Nếu không có dòng này, khi người dùng lật back ở vị trí x
 //        Thì kéo xuống vị trí 6x sẽ bị tình trạng vẫn đang lật back
-//        "Có lẽ" do RecycleView sẽ dùng lại item x để gán thông tin 6x vào
+//        Do RecycleView sẽ dùng lại item x để gán thông tin 6x vào
 //        Nên khi load lại itemview nếu đang bị lật back thì lật lại về front
         if (holder.flipItemUser.getCurrentFlipState() == EasyFlipView.FlipState.BACK_SIDE){
             holder.flipItemUser.flipTheView();
@@ -101,10 +103,10 @@ public class FbProfileAdapter extends RecyclerView.Adapter<FbProfileAdapter.User
         else
             holder.btn_delete_profile.setVisibility(View.INVISIBLE);
 //        Chỉ cho admin update id
-        if (DataHelper.mAuth.getCurrentUser().getUid().equals(DataHelper.uidAdmin))
-            holder.btn_update_id_profile.setVisibility(View.VISIBLE);
-        else
-            holder.btn_update_id_profile.setVisibility(View.INVISIBLE);
+//        if (DataHelper.mAuth.getCurrentUser().getUid().equals(DataHelper.uidAdmin))
+//            holder.btn_update_id_profile.setVisibility(View.VISIBLE);
+//        else
+//            holder.btn_update_id_profile.setVisibility(View.INVISIBLE);
 
         holder.sliceToFb.setText("                Trượt để truy cập");
 //        Truy cap Lien ket khi truot
@@ -139,18 +141,22 @@ public class FbProfileAdapter extends RecyclerView.Adapter<FbProfileAdapter.User
             public void onClick(View view) {
                 DataHelper.deleteFbProfile(context,fbProfile.keyNote);
                 DataHelper.fbProfiles.remove(position);
-                DataHelper.myData.child("TotalProfile").setValue(fbProfiles.size());
-                DataHelper.updateIdFbProfile(context,position);
+                DataHelper.myData.child("TotalProfile").setValue(DataHelper.fbProfiles.size());
+                HomeFragment.adapter.notifyDataSetChanged();
+                if (MyUploadedFragment.myFbProfiles != null)
+                    MyUploadedFragment.myFbProfiles.remove(position);
+                if (MyUploadedFragment.adapterMyUploaded != null)
+                    MyUploadedFragment.adapterMyUploaded.notifyDataSetChanged();
 
             }
         });
 
-        holder.btn_update_id_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DataHelper.updateIdFbProfile(context,position);
-            }
-        });
+//        holder.btn_update_id_profile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                DataHelper.updateIdFbProfile(context,position);
+//            }
+//        });
 //        Show menu
 
     }
@@ -163,7 +169,7 @@ public class FbProfileAdapter extends RecyclerView.Adapter<FbProfileAdapter.User
 
         private MaterialButton btn_change_profile;
         private MaterialButton btn_delete_profile;
-        private MaterialButton btn_update_id_profile;
+        //private MaterialButton btn_update_id_profile;
 
         private TextView tv_username_front_item_user;
 
@@ -194,7 +200,7 @@ public class FbProfileAdapter extends RecyclerView.Adapter<FbProfileAdapter.User
 
             btn_change_profile = (MaterialButton) itemView.findViewById(R.id.btn_change_profile);
             btn_delete_profile = (MaterialButton) itemView.findViewById(R.id.btn_delete_profile);
-            btn_update_id_profile = itemView.findViewById(R.id.btn_update_id_profile);
+            //btn_update_id_profile = itemView.findViewById(R.id.btn_update_id_profile);
 
             tvUrlProfile = itemView.findViewById(R.id.textView_url_profile);
 //            menuView.setVisibility(View.INVISIBLE);

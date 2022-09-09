@@ -207,7 +207,7 @@ public  class DataHelper {
 
         Map<String, Object> childUpdates = new HashMap<>();
 
-        childUpdates.put("/ProfileFb/" +key, postValues);
+        childUpdates.put("/ProfileFb/" + key, postValues);
 
         DataHelper.myData.updateChildren(childUpdates, new DatabaseReference.CompletionListener() {
             @Override
@@ -225,7 +225,7 @@ public  class DataHelper {
         DataHelper.myData.child("ProfileFb").child(key).setValue(null, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                if (error != null){
+                if (error == null){
                     Toast.makeText(context,"Xóa thành công",Toast.LENGTH_SHORT).show();
                 }
                 else

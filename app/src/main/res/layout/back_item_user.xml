@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content">
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_delete_profile"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:backgroundTint="@color/black"
@@ -96,23 +96,22 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_change_profile"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/btn_delete_profile"
-                    android:layout_toLeftOf="@+id/btn_update_id_profile"
+                    android:layout_alignParentRight="true"
                     app:backgroundTint="@color/black"
                     android:text="Sửa"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_update_id_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    app:backgroundTint="@color/black"
-                    android:text="Update ID"/>
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/btn_update_id_profile"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Update ID"-->
+<!--                    app:backgroundTint="@color/black" />-->
                 <com.ncorti.slidetoact.SlideToActView
                     android:id="@+id/stav_login_name"
                     android:layout_width="match_parent"

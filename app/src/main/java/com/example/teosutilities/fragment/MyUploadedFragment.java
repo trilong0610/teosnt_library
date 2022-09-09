@@ -36,10 +36,10 @@ public class MyUploadedFragment extends Fragment implements View.OnClickListener
 
     DatabaseReference myData;
     LinearLayoutManager linearLayoutManager;
-    FbProfileAdapter adapterMyUploaded;
+    public static FbProfileAdapter adapterMyUploaded;
     private RecyclerView rvMyuploadedUsers;
 
-    ArrayList<FbProfile> myFbProfiles;
+    public static ArrayList<FbProfile> myFbProfiles;
 
     public static FbProfileAdapter adapter;
 
